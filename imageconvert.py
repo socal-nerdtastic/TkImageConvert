@@ -207,6 +207,7 @@ class GUI(tk.Frame):
                 f.write(TEMPLATE.format('\n'.join(b64_data)))
             messagebox.showinfo("Success!", f"Success!\n  {self.fn.get()}\nwas created!")
         except Exception as e:
+            messagebox.showerror("ERROR!", str(e))
             raise
 
 def main():
